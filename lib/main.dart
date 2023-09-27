@@ -71,7 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
   void initState() {
     super.initState();
 
-    _centrifuge = centrifuge.createClient('ws://192.168.0.224:8000/connection/websocket');
+    _centrifuge = centrifuge.createClient('ws://192.168.0.224:8001/connection/websocket');
 
     var initializationSettingsAndroid =    const AndroidInitializationSettings('@mipmap/ic_launcher');
 
@@ -112,7 +112,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void _subscribe() async {
-    _subscription = _centrifuge.newSubscription('chat');
+    _subscription = _centrifuge.newSubscription('noti');
 
     // _subscription.subscribing.listen(_show);
     // _subscription.subscribed.listen(_show);
